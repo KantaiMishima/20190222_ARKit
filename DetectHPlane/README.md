@@ -43,15 +43,15 @@ SceneKit：簡単に3Dゲームを作ることができるフレームワー�
 <img src="https://user-images.githubusercontent.com/23329399/53167139-7286d780-361a-11e9-9e4e-d17b771a4363.PNG" width="200"/>  
 
 4. 飛行機を削除し、水平面認識指定を追加。  
-<a href="https://github.com/KantaiMishima/ARKit/commit/fa1a59d1e687bc44aa84e66d01cad7b124b076be" target="_blank">変更内容</a>
+<a href="https://github.com/KantaiMishima/20190222_ARKit/commit/2eb5c4b4aa310f853d17c8f3a63d5f4549276cef#diff-6c64bdcd51218fb93277ef2b3a5eaffc" target="_blank">変更内容</a>
 
 5. 水平面検出時に球を配置する処理を追加。  
-<a href="https://github.com/KantaiMishima/ARKit/commit/91311e4717aafdb1600b29b091b1e3f11121b920" target="_blank">変更内容</a>
+<a href="https://github.com/KantaiMishima/20190222_ARKit/commit/7f1dd3073185c26a35198cbfe7ca4e3161f8fe17#diff-6c64bdcd51218fb93277ef2b3a5eaffc" target="_blank">変更内容</a>
 
 6. XCode上でビルドし、実行。
 <img src="https://user-images.githubusercontent.com/23329399/53167203-9e09c200-361a-11e9-924f-007df3f06889.PNG" width="200"/>  
 
-### [今回のソースコード](https://raw.githubusercontent.com/KantaiMishima/ARKit/91311e4717aafdb1600b29b091b1e3f11121b920/DetectHPlane/DetectHPlane/ViewController.swift)
+### [今回のソースコード](https://raw.githubusercontent.com/KantaiMishima/20190222_ARKit/master/DetectHPlane/DetectHPlane/ViewController.swift)
 
 
 ## [次のセッションへ](../DetectImage)
