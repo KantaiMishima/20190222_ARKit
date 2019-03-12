@@ -106,6 +106,8 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             UIColor.cyan.withAlphaComponent(0.3)
         // x軸方向に-90度回転(立てる)
         planeNode.transform = SCNMatrix4MakeRotation(-Float.pi / 2.0, 1, 0, 0)
+        planeNode.physicsBody = SCNPhysicsBody(type: .kinematic,
+                                               shape: SCNPhysicsShape(geometry: planeNode.geometry!, options: nil))
 
         // 検出されたノードの子要素とする
         node.addChildNode(planeNode)
@@ -124,6 +126,8 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         // ジオメトリを更新
         planeGeometory.width  = CGFloat(planeAnchor.extent.x)
         planeGeometory.height = CGFloat(planeAnchor.extent.z)
+        planeNode.physicsBody = SCNPhysicsBody(type: .kinematic,
+                                               shape: SCNPhysicsShape(geometry: planeGeometory, options: nil))
         planeNode.simdPosition = float3(planeAnchor.center.x, 0,
                                         planeAnchor.center.z)
     }
