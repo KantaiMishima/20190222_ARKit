@@ -48,6 +48,19 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         sceneView.session.pause()
     }
 
+    // 水平面検出時に呼び出される
+    func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor:
+        ARAnchor) {
+        // ノードを作成
+        let sphereNode = SCNNode()
+        // ジオメトリ(物体)として球を指定
+        sphereNode.geometry = SCNSphere(radius: 0.05)
+        // 水平面の少し上に配置
+        sphereNode.position.y += Float(0.025)
+        // 検出されたノードの子要素とする
+        node.addChildNode(sphereNode)
+    }
+
     // MARK: - ARSCNViewDelegate
     
 /*
