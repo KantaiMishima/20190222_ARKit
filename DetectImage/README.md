@@ -22,14 +22,14 @@ Assets.xcassetsを選択し、右クリック（2本指でトラックパッド�
 **<a href="https://user-images.githubusercontent.com/23329399/53215533-76574000-3694-11e9-85fe-36ba695ea0ad.png" download="Cello.png">今回はこちらの画像を使用してみましょう</a>**
 
 4. 飛行機を削除し、画像を認識し指定する処理を追加する。  
-[変更内容](https://github.com/KantaiMishima/ARKit/commit/518822df211222c2846de0c66a99ced85e8a8124)
+[変更内容](https://github.com/KantaiMishima/20190222_ARKit/commit/5ae57cb9074c6c52d4d2c39c1df6d59a0a05f5b7#diff-571a8884c5dca91ba694a21f1e994b0d)
 
 5. 画像検出時に3D文字を配置する処理を追加する。  
-[変更内容](https://github.com/KantaiMishima/ARKit/commit/f68d684e7040f3821d5d5824ff39fefa1ea57ceb)
+[変更内容](https://github.com/KantaiMishima/20190222_ARKit/commit/02363e226642872e4e7cda54fa2a8ab78e84a062#diff-571a8884c5dca91ba694a21f1e994b0d)
 
 6. XCode上でビルドし実行すると、認識した画像に文字が表示される。  
 <img src="https://user-images.githubusercontent.com/23329399/53215965-50329f80-3696-11e9-84de-567e70d4f97d.jpeg" width="240"/>   
 
-### [今回のソースコード](https://raw.githubusercontent.com/KantaiMishima/ARKit/master/DetectImage/DetectImage/ViewController.swift)
+### [今回のソースコード](https://raw.githubusercontent.com/KantaiMishima/20190222_ARKit/master/DetectImage/DetectImage/ViewController.swift)
 
 ## [indexへ戻る](../../../)
