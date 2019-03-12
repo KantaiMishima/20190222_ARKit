@@ -57,6 +57,43 @@ class ViewController: UIViewController, ARSCNViewDelegate {
      return node
      }
      */
+
+    // 画像検出時に呼び出される
+    func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor:
+        ARAnchor) {
+        // 検出をバイブで通知
+        AudioServicesPlaySystemSound(kSystemSoundID_Vibrate)
+        
+        var displayText = "?"
+        if let imageAnchor = anchor as? ARImageAnchor {
+            if let name = imageAnchor.referenceImage.name {
+                switch name {
+                case "Cello":
+                    displayText = "Cello"
+                default:
+                    displayText = "？"
+                }
+            }
+        }
+
+        let text = SCNText(string: displayText, extrusionDepth: 0.2)
+        text.font = UIFont.systemFont(ofSize: 1.0)
+        text.firstMaterial?.diffuse.contents = UIColor.red
+        let textNode = SCNNode(geometry: text)
+        
+        let (min, max) = (textNode.boundingBox)
+        let w = Float(max.x - min.x)
+        let ratio = 0.02 / w
+        textNode.scale = SCNVector3(ratio, ratio, ratio)
+        textNode.pivot = SCNMatrix4Rotate(textNode.pivot, Float.pi, 0, 1, 0)
+
+        // テキストをカメラ方向固定にする
+        let constraint = SCNLookAtConstraint(target: sceneView.pointOfView)
+        constraint.isGimbalLockEnabled = true
+        textNode.constraints = [constraint]
+
+        node.addChildNode(textNode)
+    }
     
     func session(_ session: ARSession, didFailWithError error: Error) {
         // Present an error message to the user
